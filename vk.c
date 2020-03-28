@@ -31,24 +31,24 @@ int main()
 { 
   int count,n;
   int time=0;
-  printf("\n\nEnter the Total number of Process:\t "); 
-  scanf("%d",&n);
-  int waiting_time,turn_around_time,arrival_time[n],burst_time[n],rt[n],t[n];
-  for(count=0;count<n;count++) 
+  printf("\n\nEnter the Total number of Process:\t ");                   //Taking inpute from user for Number of Proccess *vk*
+  scanf("%d",&n);                                                        //Taking inpute from user for Number of Proccess *vk*
+  int waiting_time,turn_around_time,arrival_time[n],burst_time[n],rt[n],t[n]; //Declaring of the variable name for further use in the code
+  for(count=0;count<n;count++) //For loop to get 
   { 
     printf("\nEnter Arrival Time Process %d :",count+1); 
     scanf("%d",&arrival_time[count]); 
     if(arrival_time[count] == 0)
-    {
-    	printf("\nplease enter the arival time greater than 0\n");
+    {   
+    	printf("\nplease enter the arival time greater than 0\n");                                   //Checking for the condition asked in the question
     	scanf("%d",&arrival_time[count]); 
 	}
 	printf("\nEnter Burst Time for Process %d :",count+1); 
     scanf("%d",&burst_time[count]); 
     rt[count]=burst_time[count]; 
   } 
-	printf("\n\n TIME TO SHIFT FROM ONE PROCESS TO OTHER = 2\n\n");
-  printf("\n\nProcess\t  Arrival Time  |  Burst Time   |Turnaround Time|Waiting Time\n\n"); 
+	printf("\n\n TIME TO SHIFT FROM ONE PROCESS TO OTHER = 2\n\n");                             //To print the output
+  printf("\n\nProcess\t | Arrival Time  |  Burst Time   | Turnaround Time | Waiting Time\n\n");    // To print table
 
 
 
@@ -123,10 +123,11 @@ for (count=0;count<n;count++){
       turn_around_time+=time-arrival_time[count]; 
       
 }
-avg_wt = tot_wt / n;
-avg_tat = tot_tat / n;
+avg_wt = tot_wt / n;  // To calculate average waiting time
+avg_tat = tot_tat / n; // To calculate average turn around time 
 
-printf(" \n\nAverage waiting time : %f",avg_wt);
-printf("\n\nAverage turn_arounf time : %f",avg_tat);
+printf(" \n\nAverage waiting time : %f",avg_wt); // To print Average waiting time	
+printf("\n\nAverage turn_arounf time : %f",avg_tat); //To print Average turn around time 
 
 }
+/* Coded by Vinod Kumar */
