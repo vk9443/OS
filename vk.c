@@ -124,7 +124,7 @@ X: Y:	printf("Enter the no. of processes-");
                 res[k].waiting_time=time-prc_obj[pos].p_arrival+2;
                 time = time + pro_exec;
                 res[k].turnaround_time=time-prc_obj[pos].p_arrival+2;
-            }
+            }//*vk*
             res[k].final_pno=prc_obj[pos].process_no;
             for(i=pos;i<n;i++)
             {
